@@ -4,7 +4,7 @@ require 'capybara/dsl'
 require 'capybara/poltergeist'
 require "selenium-webdriver"
 require 'pry'
-csv_text = File.read("./instagram-list-Task-.csv")
+csv_text = File.read("lib/instagram-list-Task-.csv")
 csv = CSV.parse(csv_text)
 csv.flatten!
 csv.shift
@@ -33,6 +33,7 @@ csv.delete_if do |ig_handle|
   @session.visit("https://www.instagram.com/#{ig_handle}/?hl=en")
   if @session.has_text?("Sorry, this page isn't available.")
     true
+  else
+    binding.pry
   end
 end
-binding.pry
