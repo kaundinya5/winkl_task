@@ -101,6 +101,7 @@
     <orderEntry type="library" scope="PROVIDED" name="turbolinks-source (v5.1.0, RVM: ruby-2.4.0 [babag]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v1.2.5, RVM: ruby-2.4.0 [babag]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="uglifier (v4.1.16, RVM: ruby-2.4.0 [babag]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="validate_suffixed_number (v1.0.0, RVM: ruby-2.4.0 [babag]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="web-console (v3.6.2, RVM: ruby-2.4.0 [babag]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket-driver (v0.6.5, RVM: ruby-2.4.0 [babag]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket-extensions (v0.1.3, RVM: ruby-2.4.0 [babag]) [gem]" level="application" />

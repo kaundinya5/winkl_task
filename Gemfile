@@ -22,6 +22,8 @@ gem 'selenium-webdriver'
 gem 'chromedriver-helper'
 gem 'pry'
 gem "insta_scrape", :path => '~/workspace/winkl_task/insta_scrape/'
+gem 'validate_suffixed_number'
+
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes

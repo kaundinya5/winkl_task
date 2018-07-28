@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180727192557) do
+ActiveRecord::Schema.define(version: 20180728163837) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,21 +18,21 @@ ActiveRecord::Schema.define(version: 20180727192557) do
   create_table "posts", force: :cascade do |t|
     t.string   "link"
     t.integer  "likes"
-    t.integer  "engagement"
     t.string   "hashtags",   default: [],              array: true
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
     t.string   "user_id"
+    t.integer  "comments"
+    t.string   "engagement"
   end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
-    t.integer  "followers"
-    t.integer  "folowing"
-    t.integer  "number_of_posts"
-    t.float    "engagement"
-    t.float    "avg_engagement"
+    t.string   "followers"
+    t.string   "following"
+    t.string   "number_of_posts"
+    t.string   "avg_engagement"
     t.string   "max_liked_post"
     t.boolean  "is_winkl"
     t.datetime "created_at",      null: false

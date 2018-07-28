@@ -190,6 +190,7 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.1.16)
       execjs (>= 0.3.0, < 3)
+    validate_suffixed_number (1.0.0)
     web-console (3.6.2)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -225,6 +226,7 @@ DEPENDENCIES
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
+  validate_suffixed_number
   web-console (>= 3.3.0)
 
 BUNDLED WITH
