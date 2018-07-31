@@ -21,7 +21,7 @@ gem 'poltergeist'
 gem 'selenium-webdriver'
 gem 'chromedriver-helper'
 gem 'pry'
-gem "insta_scrape", :path => '~/workspace/winkl_task/insta_scrape/'
+# gem "insta_scrape", :path => '~/workspace/winkl_task/insta_scrape/'
 gem 'validate_suffixed_number'
 
 # Use CoffeeScript for .coffee assets and views
