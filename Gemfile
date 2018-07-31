@@ -21,8 +21,8 @@ gem 'poltergeist'
 gem 'selenium-webdriver'
 gem 'chromedriver-helper'
 gem 'pry'
-gem "insta_scrape", :git => 'https://github.com/kaundinya5/insta_scrape'
-gem 'validate_suffixed_number'
+gem "insta_scrape", :git => 'https://github.com/kaundinya5/insta_scrape.git',:branch =>"develop"
+    gem 'validate_suffixed_number'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
