@@ -1,52 +1,4 @@
 
-<style>
-  .right-black-border{
-    border-right: 1px solid #1f1e1e;
-  }
-  .h-100-percent{
-    height:100% !important;
-  }
-
-  .individual-filter {
-    margin: 1em;
-    background: #efe9e9;
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    box-shadow: 0px 0px 5px 1px #d0caca;
-  }
-  .user-profiles{
-    display: flex;
-    flex-wrap: wrap;
-    height: 87%;
-    overflow: scroll
-  }
-  .individual-profile{
-    width: 30%;
-    height: 80px;
-    background: #efe9e9;
-    border-radius: 10px;
-    margin: 10px auto;
-    box-shadow: 0px 0px 5px 1px #d0caca;
-
-  }
-  .filters-div{
-    overflow: scroll;
-    height: 87%;
-  }
-  .individual-profile-name{
-    text-align: center ;
-    border-bottom: 1px solid #dcd2d2;
-    padding-bottom: 5px;
-  }
-  .individual-profile-data{
-    display: flex;
-    justify-content: space-around;
-  }
-  .div-title{
-    border-bottom: 1px solid gray; padding: 10px 0em;display: flex;justify-content: space-around
-  }
-</style>
 <div style="position: absolute;width: 100%;height: 100%;left: 0;top: 0;background: #1f1e1e;">
   <nav style="height: 7%;display: flex">
     <p style="margin: auto;font-size: 20px;color: white;">Winkl</p>
@@ -56,7 +8,7 @@
       <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 right-black-border h-100-percent ">
         <div class="div-title">
           <h4>Filters</h4>
-          <button class="btn btn-default" onclick=""> Apply</button>
+          <button class="btn btn-default" onclick=WINKL.Filters.apply() > Apply</button>
         </div>
 
         <div class="filters-div">
@@ -68,31 +20,31 @@
           <div class="row individual-filter">
             <h6>Number of followers</h6>
             <label class="radio-inline"><input type="radio" name="followers" value="<500"><500</label>
-            <label class="radio-inline"><input type="radio" name="followers" value="500 1k">500-1k</label>
-            <label class="radio-inline"><input type="radio" name="followers" value="1k-5k">1k-5k</label>
-            <label class="radio-inline"><input type="radio" name="followers" value="5k-20k">5k-20k</label>
-            <label class="radio-inline"><input type="radio" name="followers" value="20k-100k">20k-100k</label>
-            <label class="radio-inline"><input type="radio" name="followers" value="100k">>100k</label>
+            <label class="radio-inline"><input type="radio" name="followers" value="<1k">500-1k</label>
+            <label class="radio-inline"><input type="radio" name="followers" value="<5k">1k-5k</label>
+            <label class="radio-inline"><input type="radio" name="followers" value="<20k">5k-20k</label>
+            <label class="radio-inline"><input type="radio" name="followers" value="<100k">20k-100k</label>
+            <label class="radio-inline"><input type="radio" name="followers" value=">100k">>100k</label>
           </div>
           <div class="row individual-filter">
             <h6>Followers to following ratio</h6>
-            <label class="radio-inline"><input type="radio" name="ratio" value="5-10">5-10</label>
-            <label class="radio-inline"><input type="radio" name="ratio" value="1-5">1-5</label>
-            <label class="radio-inline"><input type="radio" name="ratio" value="1"><1</label>
-            <label class="radio-inline"><input type="radio" name="ratio" value="0"><0</label>
+            <label class="radio-inline"><input type="radio" name="ratio" value="<5">1-5</label>
+            <label class="radio-inline"><input type="radio" name="ratio" value="<10">5-10</label>
+            <label class="radio-inline"><input type="radio" name="ratio" value="<1"><1</label>
+            <label class="radio-inline"><input type="radio" name="ratio" value="<0"><0</label>
           </div>
           <div class="row individual-filter">
             <h6>Number of posts</h6>
-            <label class="radio-inline"><input type="radio" name="posts" value="1k">>1k</label>
-            <label class="radio-inline"><input type="radio" name="posts" value="100-1k">100-1k</label>
+            <label class="radio-inline"><input type="radio" name="posts" value=">1k">>1k</label>
+            <label class="radio-inline"><input type="radio" name="posts" value="<1k">100-1k</label>
             <label class="radio-inline"><input type="radio" name="posts" value="<100"><100</label>
           </div>
           <div class="row individual-filter">
-            <h6>Email Present?</h6>
-            <label class="radio-inline"><input type="radio" name="avgeng" value="10%">>10%</label>
-            <label class="radio-inline"><input type="radio" name="avgeng" value="5-10%">5-10%</label>
-            <label class="radio-inline"><input type="radio" name="avgeng" value="1-5%">1-5%</label>
-            <label class="radio-inline"><input type="radio" name="avgeng" value="<1%>"><1%></label>
+            <h6>Average Engagement</h6>
+            <label class="radio-inline"><input type="radio" name="avgeng" value=">10%">>10%</label>
+            <label class="radio-inline"><input type="radio" name="avgeng" value="<10%">5-10%</label>
+            <label class="radio-inline"><input type="radio" name="avgeng" value="<5%">1-5%</label>
+            <label class="radio-inline"><input type="radio" name="avgeng" value="<1%"><1%></label>
           </div>
           <div class="row individual-filter">
             <h6>Is a Winkl blogger</h6>
@@ -107,62 +59,7 @@
           <h4 >Users</h4>
           <button class="btn btn-default "> Download CSV</button>
         </div>
-        <div class="user-profiles" >
-          <div class="individual-profile">
-            <h5 id="user_id_" class="individual-profile-name">Name</h5>
-            <div class="individual-profile-data">
-              <p>25 Posts</p>
-              <p>25 Following</p>
-              <p>25 Followers</p>
-            </div>
-          </div>
-          <div class="individual-profile">
-
-          </div>
-          <div class="individual-profile">
-
-          </div>
-          <div class="individual-profile">
-
-          </div>
-          <div class="individual-profile">
-
-          </div>
-          <div class="individual-profile">
-
-          </div>
-          <div class="individual-profile">
-
-          </div>
-          <div class="individual-profile">
-
-          </div>
-          <div class="individual-profile">
-
-          </div>
-          <div class="individual-profile">
-
-          </div>
-          <div class="individual-profile">
-
-        </div>
-          <div class="individual-profile">
-
-          </div>
-          <div class="individual-profile">
-
-          </div>
-          <div class="individual-profile">
-
-          </div>
-          <div class="individual-profile">
-
-          </div>
-          <div class="individual-profile">
-
-          </div>
-
-
+        <div class="user-profiles" id="js-users-profiles-result">
         </div>
       </div>
     </div>

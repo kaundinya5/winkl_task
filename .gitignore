@@ -47,5 +47,5 @@ bower.json
 
 # Ignore node_modules
 node_modules/
-.idea/*
+/.idea/*
 /config/database.yml
