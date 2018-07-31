@@ -1,5 +1,6 @@
-PATH
-  remote: insta_scrape
+GIT
+  remote: https://github.com/kaundinya5/insta_scrape
+  revision: cb7befb3e9556bafd41afdaccdd7fc2af538d960
   specs:
     insta_scrape (1.1.4)
       capybara (~> 2.7.1, >= 2.7.1)
