@@ -24,8 +24,13 @@ namespace :fetch_data do
       end
       following = ValidateSuffixedNumber.parse_number(ig_user.following_count.to_s.delete(',')).to_i
       followers = ValidateSuffixedNumber.parse_number(ig_user.follower_count.to_s.delete(',')).to_i
+      f_to_f_ratio = followers/following
+      if following > followers
+        f_to_f_ratio = -1
+      end
       u = User.create(name: ig_user.username,email: ig_user.email, followers: followers,
-                      following: following, number_of_posts: ig_user.post_count, is_winkl: ig_user.is_winkl)
+                      following: following, number_of_posts: ig_user.post_count,
+                      is_winkl: ig_user.is_winkl, f_to_f_ratio: f_to_f_ratio)
 
       ig_user.posts.each do |ig_post|
         eng = (((ig_post.likes.to_f+ig_post.comments.to_f)/followers.to_f)*100).round(2)
@@ -36,7 +41,9 @@ namespace :fetch_data do
 
       end
       avg_engagement = (engagement.instance_eval { reduce(:+) / size.to_f })
-      u.update_attributes(avg_engagement: number_to_percentage(avg_engagement))
+      most_liked = Post.where(:user_id=>u.id).order("likes DESC").first.link
+      u.update_attributes(avg_engagement: avg_engagement,max_liked_post: most_liked,
+                          f_to_f_ratio:f_to_f_ratio)
     end
   end
 

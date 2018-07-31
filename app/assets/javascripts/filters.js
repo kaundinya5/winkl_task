@@ -22,7 +22,7 @@ WINKL.Filters = new function() {
           var users = data.users;
           users.forEach(function(v,i){
               var profileCard = '<div class="individual-profile" id="user_id_'+v.id+'">'+
-                  '<h5  class="individual-profile-name">'+ v.name+'</h5>'+
+                  '<a href="https://instagram.com/'+v.name+'" target="_blank"> <h5  class="individual-profile-name">'+ v.name+'</h5></a>'+
                   '<div class="individual-profile-data">'+
                   '<p><span>'+ v.number_of_posts +'</span> Posts</p>'+
                   '<p><span>'+ v.following+'</span> Following</p>'+

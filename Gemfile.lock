@@ -1,3 +1,11 @@
+PATH
+  remote: insta_scrape
+  specs:
+    insta_scrape (1.1.4)
+      capybara (~> 2.7.1, >= 2.7.1)
+      phantomjs (~> 2.1.1.0, >= 2.1.1.0)
+      poltergeist (~> 1.9.0, >= 1.9.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -104,6 +112,7 @@ GEM
     nokogiri (1.8.4)
       mini_portile2 (~> 2.3.0)
     pg (0.21.0)
+    phantomjs (2.1.1.0)
     poltergeist (1.9.0)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
@@ -201,6 +210,7 @@ DEPENDENCIES
   capybara
   chromedriver-helper
   coffee-rails (~> 4.2)
+  insta_scrape!
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
